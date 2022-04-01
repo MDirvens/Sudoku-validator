@@ -1,60 +1,30 @@
 # Sudoku validator
 
-## Description
-
-Write code to check if a given string is a correct [sudoku](https://en.wikipedia.org/wiki/Sudoku) puzzle and return a message indicating whether the puzzle is valid, invalid or valid and incomplete.
-
-## Setup
-
-After cloning the repository, run the following command:
-
+To run program and tests, clone repostory. After it's done run command:
 ```sh
-npm install
-```
-
-## Usage
-
-The program can be run via `bin/validate`:
+  npm install
+``` 
+- The program can be run via `bin/validate`:
 
 ```sh
   bin/validate <full path to the sudoku file to validate>
 ```
+- The tests can be run via :
 
-Depending on the contents of the sudoku puzzle, the program should return a different result
-
-* If the puzzle is valid and completed, return `Sudoku is valid.`
-* If the puzzle is valid but not fully completed, return `Sudoku is valid but incomplete.`
-* If the puzzle is not valid, return `Sudoku is invalid.`
-
-A puzzle is valid if:
-
-1. No numbers are repeated in any of the rows
-2. No numbers are repeated in any of the columns
-3. Every 9x9 square has no repeated numbers
-
-## Implementation
-
-Additions should be written to `src/validator.js` within the method `validate`, the creation of additional methods and classes is encouraged.
-
-## Ensuring that the solution is valid
-
-This exercise contains unit tests that verify that the solution functions correctly. If all of the tests pass, the solution is correct.
-
-The tests can be run via `npm run test`.
-
-## Example sudoku file format
-
-*Zeroes represent empty sudoku cells*
+```sh
+  npm run test
 ```
-8 5 0 |0 0 2 |4 0 0
-7 2 0 |0 0 0 |0 0 9
-0 0 4 |0 0 0 |0 0 0
-------+------+------
-0 0 0 |1 0 7 |0 0 2
-3 0 5 |0 0 0 |9 0 0
-0 4 0 |0 0 0 |0 0 0
-------+------+------
-0 0 0 |0 8 0 |0 7 0
-0 1 7 |0 0 0 |0 0 0
-0 0 0 |0 3 6 |0 4 0
-```
+The program return a different result for 3 cases:
+* If the sudoku puzzle is valid and completed, programm returns `Sudoku is valid.`
+* If the sudoku puzzle is valid but not fully completed, programm returns `Sudoku is valid but incomplete.`
+* If the sudoku puzzle is not valid, programm returns `Sudoku is invalid.`
+
+To make a Sudoku puzzle valid:
+- it's rows must not contain the same numbers;
+- it's columns must not contain the same numbers;
+- it's 9x9 square must not contain the same numbers;
+
+4 classes have been added to reduce code duplication and logic has been derived to make the program work successfully.
+
+Here are the test results:  
+![alt text](https://github.com/MDirvens/DataFiles/blob/main/Pictures/sudokuValidatorTest.png)
