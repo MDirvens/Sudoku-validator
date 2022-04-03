@@ -7,7 +7,7 @@ To run program and tests, clone repostory. After it's done run command:
 - The program can be run via `bin/validate`:
 
 ```sh
-  bin/validate <full path to the sudoku file to validate>
+  node bin/validate <full path to the sudoku file to validate>
 ```
 - The tests can be run via :
 
