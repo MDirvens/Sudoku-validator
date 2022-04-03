@@ -5,7 +5,7 @@ const SquaresValidator = require("./squaresvalidator");
 class Validator {
     static validate(sudoku) {
         const validator = new Validator;
-        return validator.validate(validator.isValid(sudoku), sudoku)
+        return validator.validate(validator.isValid(sudoku), sudoku);
     }
 
     validate(valid, sudoku) {
@@ -29,4 +29,4 @@ class Validator {
   }
 }
 
-module.exports = Validator
+module.exports = Validator;
